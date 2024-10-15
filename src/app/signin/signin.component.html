@@ -1,0 +1,94 @@
+
+<div class="signup-container">
+    <div class="signup-form">
+      <img src="assets/imgs/Logo.png" alt="WeAllBeam Logo" />
+      <h1 class="head-form">Sign In</h1>
+      <p>Welcome Back <span><img src="assets/imgs/hand.png" alt=""></span></p>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="signup-email-container">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="James.Joseph@gmail.com" class="form-control" [ngClass]="{'is-invalid': loginForm.get('email')?.invalid && loginForm.get('email')?.touched}" />
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="invalid-feedback">
+            Valid email is required.
+          </div>
+        </div>
+  
+        
+          <div class="login-password">
+            <label for="password">Password</label>
+            <div class="password-btn">
+              <input [type]="hide ? 'password' : 'text'" id="password" formControlName="password" class="form-control" [ngClass]="{'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched}" />
+              <button class="btn" type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                <mat-icon class="icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="invalid-feedback pass-feedback">
+                Password must be at least 8 characters.
+              </div>
+            </div>
+          </div>
+       
+        
+  
+       <div class="rememberme-switch">
+        <div class="form-check form-switch">
+            <input class="form-check-input reg-switch" type="checkbox" formControlName="rememberme" id="termsCheckbox" />
+            <label class="form-check-label reg-condition" for="termsCheckbox">
+             Remeber me
+            </label>
+          </div>
+          <span class="Forget-password"><a href="/reset">Forget Password ?</a></span>
+       </div>
+        <button type="submit" class="btn register-submit" [disabled]="loginForm.invalid">Log in</button>
+      </form>
+   <div class="or-container">
+    <div class="or-line"> </div>
+    <p>Or</p>
+    <div class="or-line"> </div>
+   </div>
+   <div class="social-login">
+        <button class="btn ">
+          <img src="assets/imgs/face.png">
+        </button>
+    <button class="btn ">
+      <img src="assets/imgs/google.png">
+    </button>
+    <button class="btn ">
+      <img src="assets/imgs/apple-logo.png">
+    </button>
+  </div>
+  <p class="text-center">Don't you have an account? <a class="login-button" href="/signup">Create New account</a></p>
+  </div>
+  <div class="signup-slider carousel slide"  id="reg-carousel" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#reg-carousel" data-bs-slide-to="0" class="active slider-button" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#reg-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#reg-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+        <img src="assets/imgs/SignUpImage.png" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Your Child’s Well-being, Always in Focus</h3>
+          <p>Get daily insights and expert advice to support your child’s mental health journey, right at your fingertips.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imgs/SignUpImage2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Track Moods <span style="color: var(--mainColor);">&</span> Get Expert Guidance</h3>
+          <p>Monitor your child’s emotional well-being with ease and get targeted recommendations to guide them through challenging times.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imgs/SignUpImage3.png" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Expert Tools for Proactive Parenting</h3>
+          <p>Stay ahead with real-time notifications and curated resources designed to keep your child’s emotional health on track.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  

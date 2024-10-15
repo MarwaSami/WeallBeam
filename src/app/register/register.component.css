@@ -1,0 +1,161 @@
+.signup-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 4vh 0;
+  gap: 25px;
+}
+.signup-slider{
+  width: 55%;
+  border-radius: 20px;
+  padding-inline: 6%;
+}
+.signup-slider img{
+  width: 100%;
+  height: 100vh;
+  border-radius: 20px;
+
+}
+.signup-form {
+  width: 42%;
+  padding: 0 5% 0 7%;
+}
+.head-form{
+  padding-top: 4vh;
+}
+.signup-form input {
+  background-color: #F7FBFF;
+  border: 1px solid #e5e9ea;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.signup-form .form-control.is-invalid {
+  border-color: #ff8682;
+}
+
+.invalid-feedback {
+  color: #ff8682;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.password-btn {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.password-btn input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.password-btn button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.password-btn button .icon{
+  color: var(--mainColor);
+}
+.password-btn div{
+  width: 100%;
+}
+
+.signup-email-container,
+.signup-form .row {
+  margin-bottom: 1.5rem;
+}
+
+.register-submit {
+  background-color: var(--mainColor);
+  color: white;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+/* check toggle switch */
+.signup-form .form-check-input {
+  margin-right: 0.5rem;
+  margin-bottom: 2vh;
+}
+.signup-form .form-check-input:checked {
+  background-color: var(--mainColor);
+  border-color: var(--mainColor);
+  border-radius: 5px;
+}
+.signup-form .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem var(--mainColor);
+  --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%2337DBAF'%2F%3E%3C%2Fsvg%3E");
+  background-color: white;
+}
+
+.reg-condition span {
+  color: var(--termsColor);
+}
+
+.or-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.or-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e5e9ea;
+}
+
+.or-container p {
+  margin: 0 1rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.social-login button {
+  flex: 1;
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  background-color: #F7FBFF;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-button {
+  color: var(--mainColor);
+  text-align: center;
+}
+
+.pass-feedback{
+  position: relative;
+  top: 20px;
+}
+.carousel-caption{
+  padding-top: 10vh;
+  background: linear-gradient(180deg, rgba(55, 219, 175, 0) 2.97%, #052B21 76.21%);
+  width: 100%;
+left: 0;
+bottom: 0;
+border-radius: 0px 0px 20px 20px;
+}
+.carousel-caption p{
+  width: 80%;
+  margin-inline: auto;
+}

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+:root{
+  --mainColor:#37DBAF;
+  --PrimayColor:#F3F9FA;
+  --SecondaryColor:black;
+  --BackgroundColor:white;
+  --termsColor:#ff8682;
+  --bs-form-switch-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%2337DBAF'%2F%3E%3C%2Fsvg%3E");
+}
+a{
+  cursor: pointer;
+}

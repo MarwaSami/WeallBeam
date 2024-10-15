@@ -1,0 +1,88 @@
+<div class="register-container">
+  <div class="register-form">
+    <h1>WeAllBeam</h1>
+    <img src="assets/imgs/Logo.png" alt="WeAllBeam" />
+    <p>Let’s get you all set up so you can access your account.</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <!-- First Name and Last Name in a row -->
+      <div class="row">
+        <mat-form-field appearance="outline" class="field-half">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="field-half">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required />
+        </mat-form-field>
+      </div>
+
+      <!-- Email -->
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" required />
+      </mat-form-field>
+
+      <!-- Password -->
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" required />
+        <button mat-icon-button matSuffix (click)="hide = !hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- Confirm Password -->
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput formControlName="confirmPassword" [type]="hideconfirm ? 'password' : 'text'" required />
+        <button mat-icon-button matSuffix (click)="hideconfirm = !hideconfirm">
+          <mat-icon>{{hideconfirm ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- Accept Terms -->
+      <mat-checkbox formControlName="acceptTerms" required>
+        I agree to all the <a href="#">Terms and Privacy Policies</a>
+      </mat-checkbox>
+
+      <!-- Submit Button -->
+      <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Sign up</button>
+    </form>
+
+    <p>Or sign up with</p>
+    <div class="social-login">
+      <button mat-icon-button>
+        <mat-icon>google</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>facebook</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>apple</mat-icon>
+      </button>
+    </div>
+
+    <p>Already have an account? <a href="#">Log in</a></p>
+  </div>
+
+  <swiper-container class="slider" slides-per-view="1" speed="200" loop="true" css-mode="true" >
+    <swiper-slide>
+      <img src="assets/imgs/SignUpImage.png">
+      <!-- <p>Your Child’s Well-being, Always in Focus</p>
+      <p>Get daily insights and expert advice to support your child’s mental health journey, right at your fingertips.</p> -->
+    </swiper-slide>
+    <swiper-slide>
+      <img src="assets/imgs/SignUpImage2.png">
+      <!-- <p>Your Child’s Well-being, Always in Focus</p>
+      <p>Get daily insights and expert advice to support your child’s mental health journey, right at your fingertips.</p> -->
+    </swiper-slide>
+    <swiper-slide>
+      <img src="assets/imgs/SignUpImage3.png">
+      <!-- <p>Your Child’s Well-being, Always in Focus</p>
+      <p>Get daily insights and expert advice to support your child’s mental health journey, right at your fingertips.</p> -->
+    </swiper-slide>
+  </swiper-container>
+
+</div>
